@@ -9,7 +9,7 @@ module.exports = {
     `gatsby-plugin-react-next`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
