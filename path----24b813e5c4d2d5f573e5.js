@@ -1,2 +1,0 @@
-webpackJsonp([60335399758886],{77:function(t,e){t.exports={data:{site:{siteMetadata:{title:"David's Site",description:"A site about me, David Wu."}}},layoutContext:{}}}});
-//# sourceMappingURL=path----24b813e5c4d2d5f573e5.js.map
