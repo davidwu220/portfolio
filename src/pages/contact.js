@@ -15,7 +15,7 @@ class Contact extends Component {
         <div id="main">
           <article id="contact" className={this.props.articleTimeout ? 'timeout' : ''}>
             <h2 className="major">Contact</h2>
-            <form method="post" action="#">
+            <form method="post" action="https://www.briskforms.com/go/b39c731c225796dcb77619376be15ed0">
               <div className="field half first">
                 <label htmlFor="name">Name</label>
                 <input type="text" name="name" id="name" />
