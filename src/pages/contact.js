@@ -22,7 +22,6 @@ class Contact extends Component {
           `}</style>
           <script>{`
             function onSubmit(token) {
-              console.log('submit success!');
               document.getElementById("contact-form").submit();
             }
             function validate(event) {
@@ -63,11 +62,11 @@ class Contact extends Component {
             </ul>
             {close}
           </article>
-
+          
           <div id='recaptcha' className="g-recaptcha"
-          data-sitekey="6Ld3PmYUAAAAAP231FYNvfKESWdrqUkskPxMzDrU"
-          data-callback="onSubmit"
-          data-size="invisible"></div>
+            data-sitekey="6Ld3PmYUAAAAAP231FYNvfKESWdrqUkskPxMzDrU"
+            data-callback="onSubmit"
+            data-size="invisible"></div>
         </div>
       </div>
     )
