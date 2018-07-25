@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import Helmet from 'react-helmet';
+
 class Contact extends Component {
   componentDidMount() {
     this.props.onPageIn();
@@ -12,10 +14,30 @@ class Contact extends Component {
 
     return (
       <div id="wrapper">
+        <Helmet>
+          <style>{`
+            .grecaptcha-badge {
+              z-index: 10;
+            }
+          `}</style>
+          <script>{`
+            function onSubmit(token) {
+              console.log('submit success!');
+              document.getElementById("contact-form").submit();
+            }
+            function validate(event) {
+              event.preventDefault();
+              grecaptcha.execute();
+            }
+          `}
+          </script>
+          <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        </Helmet>
+
         <div id="main">
           <article id="contact" className={this.props.articleTimeout ? 'timeout' : ''}>
             <h2 className="major">Contact</h2>
-            <form method="post" action="https://www.briskforms.com/go/b39c731c225796dcb77619376be15ed0">
+            <form id='contact-form' method="post" action="https://www.briskforms.com/go/b39c731c225796dcb77619376be15ed0">
               <div className="field half first">
                 <label htmlFor="name">Name</label>
                 <input type="text" name="name" id="name" />
@@ -29,7 +51,7 @@ class Contact extends Component {
                 <textarea name="message" id="message" rows="4"></textarea>
               </div>
               <ul className="actions">
-                <li><input type="submit" value="Send Message" className="special" /></li>
+                <li><input type="submit" value="Send Message" className="special" onClick={(e) => validate(e)} /></li>
                 <li><input type="reset" value="Reset" /></li>
               </ul>
             </form>
@@ -41,6 +63,11 @@ class Contact extends Component {
             </ul>
             {close}
           </article>
+
+          <div id='recaptcha' className="g-recaptcha"
+          data-sitekey="6Ld3PmYUAAAAAP231FYNvfKESWdrqUkskPxMzDrU"
+          data-callback="onSubmit"
+          data-size="invisible"></div>
         </div>
       </div>
     )
