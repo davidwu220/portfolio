@@ -44,10 +44,6 @@
       "path---index-a0e39f21c11f6a62c5ab.js",
       "path---index-a0e39f21c11f6a62c5ab.js.map"
     ],
-    "component---src-pages-resume-js": [
-      "component---src-pages-resume-js-3ad9f9c7724e1f7086b4.js",
-      "component---src-pages-resume-js-3ad9f9c7724e1f7086b4.js.map"
-    ],
     "component---src-pages-404-js": [
       "component---src-pages-404-js-d29da3788f354a8fcf3d.js",
       "component---src-pages-404-js-d29da3788f354a8fcf3d.js.map"
@@ -72,17 +68,13 @@
       "component---src-pages-blog-js-4ed68c9cd92066353678.js",
       "component---src-pages-blog-js-4ed68c9cd92066353678.js.map"
     ],
-    "path---resume": [
-      "path---resume-a0e39f21c11f6a62c5ab.js",
-      "path---resume-a0e39f21c11f6a62c5ab.js.map"
-    ],
     "path---thank-you": [
       "path---thank-you-a0e39f21c11f6a62c5ab.js",
       "path---thank-you-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-4aa1a956d02b37f521f5.js",
-      "app-4aa1a956d02b37f521f5.js.map"
+      "app-5d344fbc129eaa8c75f7.js",
+      "app-5d344fbc129eaa8c75f7.js.map"
     ],
     "path---404": [
       "path---404-a0e39f21c11f6a62c5ab.js",
