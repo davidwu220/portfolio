@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
 import Helmet from 'react-helmet';
+import Recaptcha from 'react-recaptcha';
 
 class Contact extends Component {
   componentDidMount() {
     this.props.onPageIn();
+  }
+
+  executeCaptcha = (e) => {
+    e.preventDefault();
+    this.recaptchaInstance.execute();
+  }
+
+  verifyCallback = (token) => {
+    document.getElementById("contact-form").submit();
   }
 
   render() {
@@ -20,17 +29,6 @@ class Contact extends Component {
               z-index: 10;
             }
           `}</style>
-          <script>{`
-            function onSubmit(token) {
-              document.getElementById("contact-form").submit();
-            }
-            function validate(event) {
-              event.preventDefault();
-              grecaptcha.execute();
-            }
-          `}
-          </script>
-          <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         </Helmet>
 
         <div id="main">
@@ -46,27 +44,32 @@ class Contact extends Component {
                 <input type="text" name="email" id="email" />
               </div>
               <div className="field">
+                <label htmlFor="company">Company</label>
+                <input type="text" name="company" id="company" />
+              </div>
+              <div className="field">
                 <label htmlFor="message">Message</label>
                 <textarea name="message" id="message" rows="4"></textarea>
               </div>
               <ul className="actions">
-                <li><input type="submit" value="Send Message" className="special" onClick={(e) => validate(e)} /></li>
+                <li><input type="submit" value="Send Message" className="special" onClick={(e) => this.executeCaptcha(e)} /></li>
                 <li><input type="reset" value="Reset" /></li>
               </ul>
             </form>
             <ul className="icons">
-              <li><a href="#" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
-              <li><a href="#" className="icon fa-facebook"><span className="label">Facebook</span></a></li>
-              <li><a href="#" className="icon fa-instagram"><span className="label">Instagram</span></a></li>
-              <li><a href="#" className="icon fa-github"><span className="label">GitHub</span></a></li>
+              <li><a href="https://www.linkedin.com/in/davidwaynewu/" className="icon fa-linkedin"><span className="label">LinkedIn</span></a></li>
+              <li><a href="https://www.github.com/davidwu220/" className="icon fa-github"><span className="label">GitHub</span></a></li>
             </ul>
             {close}
           </article>
-          
-          <div id='recaptcha' className="g-recaptcha"
-            data-sitekey="6Ld3PmYUAAAAAP231FYNvfKESWdrqUkskPxMzDrU"
-            data-callback="onSubmit"
-            data-size="invisible"></div>
+
+          <Recaptcha
+            ref={e => this.recaptchaInstance = e}
+            sitekey="6Ld3PmYUAAAAAP231FYNvfKESWdrqUkskPxMzDrU"
+            theme="dark"
+            size="invisible"
+            verifyCallback={this.verifyCallback}
+          />
         </div>
       </div>
     )

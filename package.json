@@ -3,22 +3,23 @@
   "description": "David's Portfolio",
   "version": "1.0.0",
   "author": "David Wu <david@wudavid.com>",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/davidwu220/portfolio.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidwu220/portfolio.git"
   },
   "dependencies": {
     "fsevents": "1.2.4",
     "gatsby": "1.9.261",
     "gatsby-link": "1.6.44",
-    "gatsby-plugin-offline": "1.0.18",
     "gatsby-plugin-react-helmet": "2.0.11",
     "gatsby-plugin-react-next": "1.0.11",
+    "gatsby-plugin-recaptcha": "1.0.4",
     "gatsby-plugin-sass": "1.0.26",
     "gatsby-source-filesystem": "1.5.36",
     "gatsby-transformer-remark": "1.7.41",
     "prop-types": "15.6.2",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-recaptcha": "2.3.10"
   },
   "keywords": [
     "gatsby"

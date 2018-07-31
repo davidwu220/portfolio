@@ -9,13 +9,20 @@ module.exports = {
     `gatsby-plugin-react-next`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
-    // `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
         path: `${__dirname}/src/blog`,
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-recaptcha`,
+      options: {
+         async: true,
+         defer: true,
+         args: ``,
+      },
+   }
   ]
 }
