@@ -24,7 +24,6 @@ class Header extends Component {
                     <ul>
                         <li><a href="/intro" onClick={(event) => this.props.navigateWithTimeout("menu", "/intro", event)}>Intro</a></li>
                         <li><a href="/work" onClick={(event) => this.props.navigateWithTimeout("menu", "/work", event)}>Work</a></li>
-                        {/* <li><a href="/resume" onClick={(event) => this.props.navigateWithTimeout("menu", "/resume", event)}>Résumé</a></li> */}
                         <li><a href="/blog" onClick={(event) => this.props.navigateWithTimeout("menu", "/blog", event)}>Blog</a></li>
                         <li><a href="/contact" onClick={(event) => this.props.navigateWithTimeout("menu", "/contact", event)}>Contact</a></li>
                     </ul>

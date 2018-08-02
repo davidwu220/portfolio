@@ -1,6 +1,7 @@
 ---
-title: Pandas and Bananas
+title: "Pandas and Bananas"
 date: "2017-08-21"
+slug: "/blog/second-blog"
 ---
 
 Do Pandas eat bananas? Check out this short video that shows that yes! pandas do
@@ -17,7 +18,7 @@ and here:
 
 ```javascript{1-2,22}
 // In your gatsby-config.js
-// Let's make this line very long so that our container has to scroll its overflow…overflow…overflow…overflow…overflow…overflow…overflow…
+// Let's make this line very long so that our container has to scroll its overflow…
 plugins: [
   {
     resolve: `gatsby-transformer-remark`,

@@ -12,8 +12,8 @@ class Blog extends Component {
 
   render() {
 
-    let close = <div className="close" onClick={(event) => this.props.navigateWithTimeout('page', '/')}></div>;
-    let blogDataArr = this.props.blogData;
+    let close = <div className="close" onClick={() => this.props.navigateWithTimeout('page', '/')}></div>;
+    let { edges } = this.props.data.allMarkdownRemark;
 
     return (
       <div id="wrapper">
@@ -22,14 +22,14 @@ class Blog extends Component {
             <h2 className="major">Blog</h2>
             <span className="image main"><img src={pic03} alt="" /></span>
             <ul className="alt">
-              <a href="/postPage" onClick={(event) => this.props.navigateWithTimeout('page', '/postPage', event)}>Read the post...</a>
-              {blogDataArr.map(({node}) => (
+              {edges.map(({node}) => (
                 <li key={node.id}>
                   <header>
                     <h3>{node.frontmatter.title}</h3>
                     <p className="date">{node.frontmatter.date} - {node.timeToRead} minute read</p>
                   </header>
                   <p>{node.excerpt}</p>
+                  <a href={node.frontmatter.slug} onClick={(event) => this.props.navigateWithTimeout('page', node.frontmatter.slug, event)}>Continue reading...</a>
                 </li>
               ))}
             </ul>
@@ -50,3 +50,22 @@ Blog.propTypes = {
 }
 
 export default Blog;
+
+export const blogQuery = graphql`
+  query BlogQuery {
+    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "DD MMMM, YYYY")
+            slug
+          }
+          excerpt
+          timeToRead
+        }
+      }
+    }
+  }
+`;

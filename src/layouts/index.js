@@ -128,7 +128,7 @@ class Template extends React.Component {
           ...this.props,
           article: this.state.article,
           articleTimeout: this.state.articleTimeout,
-          blogData: this.props.data.allMarkdownRemark.edges,
+          // blogData: this.props.data.allMarkdownRemark.edges,
           onPageIn: this.handlePageIn,
           onPageOut: this.handlePageOut,
           onMenuIn: this.handleMenuIn,
@@ -145,26 +145,12 @@ class Template extends React.Component {
 
 export default Template;
 
-export const pageQuery = graphql`
-  query PageQuery {
+export const siteQuery = graphql`
+  query SiteQuery {
     site {
       siteMetadata {
         title
         description
-      }
-    }
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-          }
-          excerpt
-          timeToRead
-        }
       }
     }
   }

@@ -11,7 +11,7 @@ class Work extends Component {
 
   render() {
 
-    let close = <div className="close" onClick={(event) => this.props.navigateWithTimeout('page', '/')}></div>;
+    let close = <div className="close" onClick={() => this.props.navigateWithTimeout('page', '/')}></div>;
 
     return (
       <div id="wrapper">
