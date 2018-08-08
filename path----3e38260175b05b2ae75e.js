@@ -1,2 +1,2 @@
-webpackJsonp([60335399758886],{81:function(t,e){t.exports={data:{site:{siteMetadata:{title:"David's Site",description:"David's portfolio website."}}},layoutContext:{}}}});
+webpackJsonp([60335399758886],{82:function(t,e){t.exports={data:{site:{siteMetadata:{title:"David's Site",description:"David's portfolio website."}}},layoutContext:{}}}});
 //# sourceMappingURL=path----3e38260175b05b2ae75e.js.map

@@ -1,0 +1,2 @@
+webpackJsonp([49683490770531],{270:function(e,t){e.exports={data:{allMarkdownRemark:{edges:[{node:{id:"/Users/davidwu/Desktop/Projects/portfolio/src/blog/using-tagsby.md absPath of file >>> MarkdownRemark",frontmatter:{title:"Using Gatsby",date:"10 August, 2018",slug:"/blog/built-my-gatsby-site"},excerpt:"\nI had decided to build my personal portfolio website using [Gatsby](https://www.gatsbyjs.org) and I'm going to share my experience here.\n",timeToRead:1}}]}},pathContext:{}}}});
+//# sourceMappingURL=path---blog-39e95600c6ce2946d49f.js.map
