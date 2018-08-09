@@ -40,7 +40,7 @@ class Work extends Component {
               <tbody>
                 <tr>
                   <td><h4>Freelance Web Developer</h4><i>Sep. 2017 - Present</i></td>
-                  <td>Developed and deployed “st_life.singtaola.com” on a remote server for Sing Tao Daily Newspapers using the MERN stack. Includes a control center for their staff to manage and monitor contents on the main site.</td>
+                  <td>Developed and deployed <a href="http://st_life.singtaola.com">st_life.singtaola.com</a> on a remote server for Sing Tao Daily Newspapers using the MERN stack. Includes a control center for their staff to manage and monitor contents on the main site.</td>
                   <td>HTML, CSS, MERN (MongoDB, Express.js, React, and Node.js) stack, IaaS (Linux Ubuntu Server deployed on DigitalOcean)</td>
                 </tr>
                 <tr>

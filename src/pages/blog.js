@@ -28,8 +28,11 @@ class Blog extends Component {
                     <h3>{node.frontmatter.title}</h3>
                     <p className="date">{node.frontmatter.date} - {node.timeToRead} minute read</p>
                   </header>
-                  <p>{node.excerpt}</p>
-                  <a href={node.frontmatter.slug} onClick={(event) => this.props.navigateWithTimeout('page', node.frontmatter.slug, event)}>Continue reading...</a>
+                  <p>
+                    {node.excerpt} <br/><br/>
+                    <a href={node.frontmatter.slug} onClick={(event) => this.props.navigateWithTimeout('page', node.frontmatter.slug, event)} style={{'float': 'right'}}>Continue reading</a>
+                  </p>
+                  
                 </li>
               ))}
             </ul>

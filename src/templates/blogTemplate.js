@@ -22,13 +22,12 @@ class BlogTemplate extends Component {
       <div id="wrapper">
         <div id="main">
           <article id="blog" className={this.props.articleTimeout ? 'timeout' : ''}>
-            <h2 className="major">Blog</h2>
+            <h2 className="major">{frontmatter.title}</h2>
             <span className="image blog_page"><img src={pic03} alt="" /></span>
-                <header>
-                  <h3>{frontmatter.title}</h3>
-                  <p>{frontmatter.date} - {timeToRead} minute read</p>
-                </header>
-                <div dangerouslySetInnerHTML={{ __html: html }} />
+            <header>
+              <p>{frontmatter.date} - {timeToRead} minute read</p>
+            </header>
+            <div dangerouslySetInnerHTML={{ __html: html }} />
             <a href="/" onClick={(event) => this.props.navigateWithTimeout('page', '/', event)}>Let's go back home...</a>
             {close}
           </article>
