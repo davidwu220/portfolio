@@ -13,8 +13,8 @@
       "component---src-pages-index-js-2c1cf5c4bbaec7502fe1.js.map"
     ],
     "path---blog": [
-      "path---blog-39e95600c6ce2946d49f.js",
-      "path---blog-39e95600c6ce2946d49f.js.map"
+      "path---blog-993ba20f1c60ad4320fd.js",
+      "path---blog-993ba20f1c60ad4320fd.js.map"
     ],
     "path---": [
       "path----3e38260175b05b2ae75e.js",
@@ -62,6 +62,10 @@
       "component---src-pages-thank-you-js-2f4545a042b6f04e1d82.js",
       "component---src-pages-thank-you-js-2f4545a042b6f04e1d82.js.map"
     ],
+    "path---blog-moving-poolpal-to-react-native": [
+      "path---blog-moving-poolpal-to-react-native-84d7a0d5a750b0fca100.js",
+      "path---blog-moving-poolpal-to-react-native-84d7a0d5a750b0fca100.js.map"
+    ],
     "component---src-pages-blog-js": [
       "component---src-pages-blog-js-ab479d1292e240f1eae8.js",
       "component---src-pages-blog-js-ab479d1292e240f1eae8.js.map"
@@ -71,9 +75,9 @@
       "path---thank-you-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-b8cbb47d16378a7414d7.js",
+      "app-c68d98dbc188d9b842ac.js",
       "build-js-styles.css",
-      "app-b8cbb47d16378a7414d7.js.map",
+      "app-c68d98dbc188d9b842ac.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-built-my-gatsby-site": [
